@@ -69,7 +69,7 @@ function Head() {
     const handleHead = (value) => {
 
         setChecked([false,false]);
-        
+
         setIns(1);
 
         setTimeout(function() { 
@@ -88,7 +88,7 @@ function Head() {
 
         setTimeout(function() { 
             setChecked([true,true]);
-        }, 1000);
+        }, 2500);
 
     };
 
