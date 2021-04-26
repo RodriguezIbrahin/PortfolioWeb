@@ -141,8 +141,8 @@
 
 .proyect #title , .proyectAnimate #title {
     position: absolute;
-    line-height: 4rem;
-    font-size: 3em;
+    line-height: 3rem;
+    font-size: 2em;
     text-shadow: 3px  0px 0px black;
     letter-spacing: 0.3rem;
     color: rgba(255, 255, 255, 0.904);
@@ -160,7 +160,7 @@
 
 .proyect #subtitleMovile , .proyectAnimateMovile #subtitleMovile {
     font-family: Relative;
-    font-size: 1em;
+    font-size: 0.8em;
     letter-spacing: 0.2rem;
     margin: 2vh;
 }
