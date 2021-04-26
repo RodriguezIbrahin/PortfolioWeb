@@ -8,6 +8,8 @@ function CardProyects({ onclick, set, page, setPage, setChange, setChecked }) {
 
     const [state, setState] = React.useState(false);
 
+    const [start, setStart] = React.useState({x: null, y: null});
+
     const handleProyects = () => {
 
         setState(true);
@@ -48,6 +50,35 @@ function CardProyects({ onclick, set, page, setPage, setChange, setChecked }) {
 
         }, 4000);
     };
+
+    const handleTouchStart = (e) => {
+
+        const firstTouchEvent = e.touches[0];
+
+        const location = {
+          x: firstTouchEvent.clientX, 
+          y: firstTouchEvent.clientY
+        };
+        
+        setStart({x: location.x, y: location.y})
+    }
+
+    const handleTouchEnd = (e) =>{
+
+        const firstTouchEvent = e.changedTouches[0];
+
+        const location = {
+          x: firstTouchEvent.clientX,
+          y: firstTouchEvent.clientY
+        }
+
+        const differences = {
+            x: start.x - location.x,
+            y: start.y - location.y
+        }
+
+        if(differences.x !== 0 && differences.y !== 0){ handleChange() }
+    }
 
 
     
@@ -95,7 +126,11 @@ function CardProyects({ onclick, set, page, setPage, setChange, setChecked }) {
 
             <Hidden mdUp>
 
-                <div className={state ? "proyectAnimateMovile" : "proyect"}  onWheel={(e)=> handleChange()}>
+                <div 
+                    className={state ? "proyectAnimateMovile" : "proyect"}  
+                    onTouchStart={(e)=> handleTouchStart(e)}
+                    onTouchEnd={(e)=> handleTouchEnd(e)}
+                >
 
                     <div id="name" style={{marginTop: "-25vh"}} onClick={() =>  handleProyects()}>
                  
