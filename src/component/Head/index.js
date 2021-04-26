@@ -12,7 +12,7 @@ function Head() {
 
     const [checked, setChecked] = React.useState([false, false]);
 
-    const [about, setAbout] = React.useState(false);
+    const [about, setAbout] = React.useState(3); //1 aparicion 2 desaparicion 3hidden
 
     const [loading, setLoading] = React.useState(true);
 
@@ -46,10 +46,15 @@ function Head() {
 
         if(checked[0] || checked[1]) {
             setChecked([false,false])
-            setAbout(true);
+            setAbout(1);
         }
         else {
-            setAbout(false);
+            setAbout(2);
+
+            setTimeout(function() { 
+                setAbout(3);
+            }, 3500);
+
             setTimeout(function() { 
                 setChecked([true, false]);
             }, 1000);
@@ -63,6 +68,8 @@ function Head() {
 
     const handleHead = (value) => {
 
+        setChecked([false,false]);
+        
         setIns(1);
 
         setTimeout(function() { 
@@ -78,6 +85,10 @@ function Head() {
         setTimeout(function() { 
             handleHead(false);
         }, 500);
+
+        setTimeout(function() { 
+            setChecked([true,true]);
+        }, 1000);
 
     };
 
@@ -102,7 +113,7 @@ function Head() {
             
                     <div className="bottoms" onClick={handleAbout} >
 
-                        {about ? "Closed" : "About"}
+                        {about === 2 ? "Closed" : "About"}
 
                     </div>
 
@@ -156,7 +167,7 @@ function Head() {
             
                     }
 
-                    <div className={`${about ? "centerAbsolute" : "hiddenAbout" }`}>
+                    <div className={`${about === 1 ? "centerAbsolute" : about === 2 ? "hiddenAbout" : "hidden" }`}>
                 
                         <About onclick={handleAbout}/>
 
