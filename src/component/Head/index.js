@@ -83,16 +83,13 @@ function Head() {
 
     return (
         
-        <div>
-            { loading ? 
+        <div>   
             
-                <div className="loading">
+                <div className={`${loading ? "loading" : "hidden" }`}>
 
-                    <Lottie animationData={loadings}/>
+                    <Lottie animationData={loadings} style={{height: "100px"}}/>
         
                 </div>
-        
-            :
 
                 <div className="root">
 
@@ -141,7 +138,7 @@ function Head() {
 
                                 <Collapse in={checked[1]} {...(checked[1] ? { timeout: 2000 } : {})}>
 
-                                    <img src={arrow} height="100xp" style={{transform: "rotate(-90deg)"}} onClick={handleDown}/>
+                                    <img src={arrow} height="40xp" style={{transform: "rotate(-90deg)"}} onClick={handleDown}/>
 
                                 </Collapse>
 
@@ -159,7 +156,7 @@ function Head() {
             
                     }
 
-                    <div className={`${about ? "centerAbsolute" : "hidden" }`}>
+                    <div className={`${about ? "centerAbsolute" : "hiddenAbout" }`}>
                 
                         <About onclick={handleAbout}/>
 
@@ -172,7 +169,7 @@ function Head() {
                     </a>
                 
                 </div>
-            }
+            
 
         </div>
     

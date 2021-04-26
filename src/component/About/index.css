@@ -13,7 +13,6 @@ a {
     color: rgba(255, 255, 255, 0.747);
     text-align: left;
     text-rendering: geometricPrecision;
-    cursor: pointer;
 }
 
 .About #name {

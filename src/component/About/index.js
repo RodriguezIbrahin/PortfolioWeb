@@ -2,11 +2,11 @@ import "./index.css";
 import GitHub from "../../img/GitHub.png";
 import Linkedin from "../../img/Linkedin.png";
 
-function About({ onclick }) {
+function About() {
     
     return (
         
-        <div className="About" onClick={() => onclick()}>
+        <div className="About">
                     
             <div id="name">
                         
