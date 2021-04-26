@@ -162,7 +162,7 @@
     font-family: Relative;
     letter-spacing: 0.15rem;
     font-size: 0.9rem;
-    animation: aparicion 5s;
+    animation: aparicion 16s;
     cursor: pointer;
 }
 
@@ -213,7 +213,7 @@
 @keyframes aparicion {
     0% { opacity: 0; }
   
-    50% { opacity: 0; }
+    60% { opacity: 0; }
 
     100% { opacity: 1; }
 }

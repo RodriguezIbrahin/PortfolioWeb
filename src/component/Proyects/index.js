@@ -24,7 +24,7 @@ export const proyects = [{},
         title: "RunningDeportes",
         subtitle: "Tienda virtual",
         subtitle2: "eCommerce de una pequeña empresa familiar",
-        description: "Front-End con React, Redux y Material-UI, mientra Back-End con Express, Sequelize y JsonWebToken",
+        description: "Front-End con React, Redux y Material-UI. Back-End con Express, Sequelize y JsonWebToken",
         url: "https://www.runningdeportes.store",
     },
 
