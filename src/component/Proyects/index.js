@@ -25,7 +25,7 @@ export const proyects = [{},
         subtitle: "Tienda virtual",
         subtitle2: "eCommerce de una pequeña empresa familiar",
         description: "Front-End con React, Redux y Material-UI, mientra Back-End con Express, Sequelize y JsonWebToken",
-        url: "https://running-deportes.vercel.app",
+        url: "https://www.runningdeportes.store",
     },
 
 ]
